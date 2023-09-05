@@ -1,0 +1,28 @@
+aritmetiska summan:
+def summa(a, d, n):
+	an=a+d*n-d
+	s=n*(a+an)*0.5
+	print("Den aritmetiska summan är", end=": ")
+	return(s)
+
+a=int(input("Skirv in startvärdet (a1): "))
+d=int(input("Skirv in differensen (d): "))
+n=int(input("Skirv in antal element i följden (n): "))
+an=a+d*n-d
+s=n*(a+an)*0.5
+"""Räknar ut summan"""
+print("Den aritmetiska summan är: ", s)
+
+
+
+def summa(g, q, n):
+	s=g*(q**n-1)/(q-1)
+	print("Den geometriska summan är", end=": ")
+	return(s)
+
+g=int(input("Skirv in startvärdet (g1): "))
+q=int(input("Skirv in kvoten (q): "))
+n=int(input("Skirv in antal element i följden (n): "))
+s=g*(q**n-1)/(q-1)
+"""Räknar ut summan"""
+print("Den geometriska summan är: ", s)
