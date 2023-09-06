@@ -1,28 +1,29 @@
-aritmetiska summan:
-def summa(a, d, n):
-	an=a+d*n-d
-	s=n*(a+an)*0.5
-	print("Den aritmetiska summan är", end=": ")
-	return(s)
+def beräkning_arisumma(a, d, n):
+	"""beräknar summan av talen i aritmetisk talföljd som börjar med a, har differensen d och har n st tal"""
+	an=a+d*n-d #sista talet i följden
+	s=n*(a+an)*0.5 #berääknar summan av alla tal i följden
+	print("Den aritmetiska summan är: " + str(s))
+
+beräkning_arisumma(1, 2, 3)
+
+def beräkning_geosumma(g, q, n):
+	"""beräknar geometrisk summa. Tar in parametrarn g (första elementet), q (kvoten), n (tal i följden)"""
+	s=g*(q**n-1)/(q-1) #beräknar summan av alla tal
+	print("Den geometriska summan är: " + str(s))
+	
+beräkning_geosumma(1, 2, 3)
 
 a=int(input("Skirv in startvärdet (a1): "))
 d=int(input("Skirv in differensen (d): "))
 n=int(input("Skirv in antal element i följden (n): "))
-an=a+d*n-d
-s=n*(a+an)*0.5
-"""Räknar ut summan"""
-print("Den aritmetiska summan är: ", s)
-
-
-
-def summa(g, q, n):
-	s=g*(q**n-1)/(q-1)
-	print("Den geometriska summan är", end=": ")
-	return(s)
+"""användaren skriver in startvärdet, differensen och antal element"""
+an=a+d*n-d #sista talet i följdne
+s=n*(a+an)*0.5 #beräknar summan av alla tal i följden
+print("Den aritmetiska summan är: " + str(s))
 
 g=int(input("Skirv in startvärdet (g1): "))
 q=int(input("Skirv in kvoten (q): "))
 n=int(input("Skirv in antal element i följden (n): "))
-s=g*(q**n-1)/(q-1)
-"""Räknar ut summan"""
-print("Den geometriska summan är: ", s)
+"""användaren skriver in värderna för startvärdet, kvoten och antal element"""
+s=g*(q**n-1)/(q-1) #beräknar summan av alla tal
+print("Den geometriska summan är: " + str(s))
